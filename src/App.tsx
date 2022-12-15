@@ -1,8 +1,11 @@
 import React, { FC } from "react";
 import "./style.scss";
+import classNames from "classnames";
 
 const HelloMessage: FC<{ name: string }> = ({ name }) => {
-  return <div>Hello {name}</div>;
+  return (
+    <div className={classNames("bg-red-50",'bg-p','text-r','font-bold', "text-2xl",'p-3')}>Hello {name}</div>
+  );
 };
 
 export function App() {
