@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "vite",
-    "build": "vite build"
+    "build": "vite build -m devlopment",
+    "build:prod": " vite build -m production"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,8 @@
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
     "autoprefixer": "^10.4.13",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.1.14",
     "postcss": "^8.4.20",
     "prettier": "^2.7.1",
     "sass": "^1.56.0",

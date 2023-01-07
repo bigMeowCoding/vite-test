@@ -1,1 +1,6 @@
 @import "tailwind";
+
+div {
+  background: $bg;
+  width: $width;
+}
