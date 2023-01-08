@@ -1,0 +1,17 @@
+@import "./tailwind.scss";
+
+div {
+  background: $bg;
+  width: clamp($width, 30%, 400px);
+  color: var(--red);
+}
+
+@media (min-resolution: 2dppx) {
+  .div {
+    background-color: purple;
+  }
+}
+body {
+  background: var(--green);
+  user-select: none;
+}
