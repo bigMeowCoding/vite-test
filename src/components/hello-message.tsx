@@ -1,7 +1,16 @@
 import classNames from "classnames";
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import "./hello-message.scss";
 const HelloMessage: FC<{ name: string }> = ({ name }) => {
+  useEffect(() => {
+    fetch("/api/test")
+      .then((d) => {
+        console.log("data=====", d);
+      })
+      .catch((e) => {
+        console.error("error======", e);
+      });
+  }, []);
   return (
     <div
       className={classNames(

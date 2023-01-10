@@ -4,6 +4,7 @@ import tailwindcss from "tailwindcss";
 import autoprefixer from "autoprefixer";
 import postcssEnv from "postcss-preset-env";
 import viteAlias from "./src/plugins/vite-alias";
+import { viteMockServe } from "vite-plugin-mock";
 
 export default defineConfig(() => {
   return {
@@ -27,14 +28,14 @@ export default defineConfig(() => {
             "src/common/styles/var.scss"
           )}";
           @import "${path.resolve(
-              __dirname,
-              "src/common/styles/variable.css"
+            __dirname,
+            "src/common/styles/variable.css"
           )}";
           
           `,
         },
       },
     },
-    plugins: [{ ...viteAlias(), enforce: "pre" }],
+    plugins: [{ ...viteAlias(), enforce: "pre" }, viteMockServe({})],
   };
 });
